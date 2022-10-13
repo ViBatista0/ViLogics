@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meu site pessoal para publicar os exercícios de lógica">
+    <meta name="keywords" content="logica, programação, javascript">
+    <meta name="author" content="Vinícius Batista">
+    <meta name="robots" content="index/follow">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>VisualG - 2</title>
+</head>
+
+<body class="lista">
+
+    <nav class="navbar navbar-expand-lg">
+
+        <div class="container-fluid">
+            <a class="navbar-brand " href="#">ViLogics</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="visualg.html">VisualG</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            JavaScript
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="lacosjs.html">Laços de repetição</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="exercicios py-3" id="ex">
+
+        <div class="container-fluid py-5 text-center">
+
+            <h1>Lista de Lógica 2</h1>
+
+            <div class="accordion" id="list">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Exercício 1 - Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e
+                            dias e escreva a idade dessa pessoa expressa apenas em dias. Considerar ano com 365 dias e
+                            mês com 30 dias.
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <pre>
+                                <code>
+Algoritmo "Idadedias"
+
+// Disciplina   : [Lógica de Programação Javascript]
+// Professor   : Jailson
+// Descrição   : Armazena a idade do usuário em anos, meses e dias e exibe a idade em dias.
+// Autor(a)    : Vinícius
+// Data atual  : 07/09/2022
+
+Var
+
+// Seção de Declarações das variáveis 
+anos:inteiro
+meses:inteiro
+dias:inteiro
+idade:inteiro
+
+Inicio
+
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+Escreval("Digite sua idade separando o ano, dia e mês (ex.18 anos, 2 meses e 5 dias): ")
+Escreval("Digite quantos anos você tem:")
+Leia(anos)
+Escreval("Digite quantos meses você tem:")
+Leia(meses)
+Escreval("Digite quantos dias você tem:")
+Leia(dias)
+idade<- (365*anos)+(30*meses)+dias
+Escreval("Sua idade em dias é: ", idade," dias" )
+
+Fimalgoritmo
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Exercício 2 - Escreva um algoritmo para ler o número total de eleitores de um município, o
+                        número de votos brancos, nulos e válidos. Calcular e escrever o percentual que cada um
+                        representa em relação ao total de eleitores.
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <pre>
+                            <code>
+Algoritmo "Votos"
+
+// Disciplina   : [Lógica de Programação Javascript]
+// Professor   : Jailson
+// Descrição   : Pega o total de votos em branco, nulos e válidos e calcula a porcentagem que elas representam
+// Autor(a)    : Vinícius
+// Data atual  : 07/09/2022
+
+Var
+
+// Seção de Declarações das variáveis 
+votosbrancos:inteiro
+votosnulos:inteiro
+votosvalidos:inteiro
+eleitores:inteiro
+
+Inicio
+
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+Escreval("Digite o total de votos em branco:")
+Leia(votosbrancos)
+Escreval("Digite o total de votos nulos:")
+Leia(votosnulos)
+Escreval("Digite o total de votos válidos:")
+Leia(votosvalidos)
+eleitores<-votosbrancos+votosnulos+votosvalidos
+Escreval("O total de votos em branco foi: ",votosbrancos)
+Escreval("Representa",(votosbrancos/100)*eleitores, "% dos votos")
+Escreval("O total de votos nulos foi: ",votosnulos)
+Escreval("Representa",(votosnulos/100)*eleitores, "% dos votos")
+Escreval("O total de votos válidos foi: ",votosvalidos)
+Escreval("Representa",(votosvalidos/100)*eleitores, "% dos votos")
+
+Fimalgoritmo
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Exercício 3 - Escreva um algoritmo para ler o salário mensal atual de um funcionário e o
+                        percentual de reajuste. Calcular e escrever o valor do novo salário.
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <pre>
+                            <code>
+Algoritmo "Salario"
+
+// Disciplina   : [Lógica de Programação Javascript]
+// Professor   : Jailson
+// Descrição   : Calcula o salário de uma pessoa, efetua e exibe o reajuste feito.
+// Autor(a)    : Vinícius
+// Data atual  : 07/09/2022
+
+Var
+
+// Seção de Declarações das variáveis 
+salario:real
+reajuste:inteiro
+calculo:real
+salariofinal:real
+
+
+Inicio
+
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+Escreval("Digite o salário: ")
+Leia(salario)
+Escreval("Digite a porcentagem do reajuste:")
+Leia(reajuste)
+calculo<- reajuste/100*salario
+Escreval("O aumento foi de: R$",calculo)
+salariofinal<-calculo+salario
+Escreval("O salário após o reajuste ficou: R$",salariofinal)
+
+
+
+Fimalgoritmo
+
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        Exercício 4 - O custo de um carro novo ao consumidor é a soma do custo de fábrica com a
+                        porcentagem do distribuidor e dos impostos (aplicados ao custo de fábrica). Supondo que o
+                        percentual do distribuidor seja de 28% e os impostos de 45%, escrever um algoritmo para ler o
+                        custo de fábrica de um carro, calcular e escrever o custo final ao consumidor.
+                    </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <pre>
+                            <code>
+Algoritmo "Carronovo"
+
+// Disciplina   : [Lógica de Programação Javascript]
+// Professor   : Jailson
+// Descrição   : Calcula o custo de um carro novo com todos os impostos aplicados
+// Autor(a)    : Vinícius
+// Data atual  : 08/09/2022
+
+Var
+
+// Seção de Declarações das variáveis
+custof,pordistribuidor,imposto,valorfinal:real
+
+
+Inicio
+
+// Seção de Comandos, procedimento, funções, operadores, etc...
+
+Escreval("Digite o custo de fábrica do veículo: ")
+Leia(custof)
+pordistribuidor<-28/100*custof
+imposto<-45/100*custof
+Escreval("O valor da cobrança do distribuidor é de 28% (R$",pordistribuidor,")")
+Escreval("O valor da cobrança dos impostos é de 45% (R$",imposto,")")
+valorfinal<-custof+pordistribuidor+imposto
+Escreval("O valor final do seu carro novo é: R$",valorfinal)
+
+
+Fimalgoritmo
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion accordion-item">
+                <h2 class="accordion-header" id="flush-headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        Exercício 5 - Ler uma temperatura em graus Celsius e apresentá-la convertida em graus
+                        Fahrenheit. A fórmula de conversão é F = (9*C + 160) /5, sendo F a temperatura em Fahrenheit e C
+                        a temperatura em Celsius.
+                    </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <pre>
+                            <code>
+Algoritmo "CelsiusToFahrenheit"
+
+// Disciplina   : [Lógica de Programação Javascript]
+// Professor   : Jailson
+// Descrição   : Pega a temperatura em Celsius converte em Fahrenheit
+// Autor(a)    : Vinícius Batista
+// Data atual  : 08/09/2022
+
+Var
+
+// Seção de Declarações das variáveis 
+c:real
+f:real
+
+Inicio
+
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+Escreval("Digite a temperatura em graus Celsius:")
+Leia(c)
+f<-(9*c+160)/5
+Escreval("A temperatura digitada convertida para Fahrenheit fica:",f,"°F")
+
+Fimalgoritmo
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion accordion-item">
+                <h2 class="accordion-header" id="flush-headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                        Exercício 6 - Ler uma temperatura em graus Fahrenheit e apresentá-la convertida em graus
+                        Celsius. A fórmula de conversão é C=(F-32) *(5/9), sendo F a temperatura em Fahrenheit e C a
+                        temperatura em Celsius.
+                    </button>
+                </h2>
+                <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <pre>
+                            <code>
+Algoritmo "FahrenheitToCelsius"
+
+// Disciplina   : [Lógica de Programação Javascript]
+// Professor   : Jailson
+// Descrição   : Pega a temperatura em Fahrenheit converte em Celsius
+// Autor(a)    : Vinícius Batista
+// Data atual  : 08/09/2022
+
+Var
+
+// Seção de Declarações das variáveis
+f:real
+c:real
+
+
+Inicio
+
+// Seção de Comandos, procedimento, funções, operadores, etc...
+
+Escreval("Digite a temperatura em graus Fahrenheit:")
+Leia(f)
+c<-(f-32)*(5/9)
+Escreval("A temperatura digitada convertida para Celsius fica:",c,"°C")
+
+Fimalgoritmo
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion accordion-item">
+                <h2 class="accordion-header" id="flush-headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                        Exercício 7 - Calcular e apresentar o valor do volume de uma lata de óleo, utilizando a fórmula:
+                        Volume = π*Raio2*Altura
+                    </button>
+                </h2>
+                <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headinSeven"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <pre>
+                            <code>
+Algoritmo "VolumeLataOleo"
+
+// Disciplina   : [Lógica de Programação Javascript]
+// Professor   : Jailson
+// Descrição   : Calcula o volume de lata de óleo
+// Autor(a)    : Vinícius Batista
+// Data atual  : 08/09/2022
+
+Var
+
+// Seção de Declarações das variáveis
+raio,altura,volume:inteiro
+
+
+
+
+Inicio
+
+// Seção de Comandos, procedimento, funções, operadores, etc...
+Escreval("Digite o raio da lata:")
+Leia(raio)
+Escreval("Digite a altura da lata:")
+Leia(altura)
+volume<- pi*(raio*raio)*altura
+Escreval("O volume da lata é:", volume,"m²")
+
+Fimalgoritmo
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion accordion-item">
+                <h2 class="accordion-header" id="flush-headingEight">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                        Exercício 8 - Efetuar o cálculo da quantidade de litros de combustível gasta em uma viagem,
+                        utilizando um automóvel que faz 12 Km por litro. Para obter o cálculo, o usuário deve fornecer o
+                        tempo gasto
+                    </button>
+                </h2>
+                <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <pre>
+                            <code>
+Algoritmo "Combustivel"
+
+// Disciplina   : [Lógica de Programação Javascript]
+// Professor   : Jailson
+// Descrição   : Calcula o consumo de combustível que um carro gasta
+// em uma viagem, tendo em vista que ele consome 12km por litro de gasolina
+// Autor(a)    : Vinícius Batista
+// Data atual  : 09/09/2022
+
+Var
+
+// Seção de Declarações das variáveis 
+otempo, velocidade, distancia, consumo:real
+
+Inicio
+
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+Escreval("Digite o tempo em horas gastas na viagem:")
+Leia(otempo)
+Escreval("Digite a velocidade média do carro:")
+Leia(velocidade)
+distancia<- otempo*velocidade
+consumo<-distancia/12
+Escreval("O tempo gasto na viagem foi:",otempo,"h")
+Escreval("A velocidade média foi:",velocidade,"km/h")
+Escreval("A distância percorrida foi:",distancia,"km")
+Escreval("O consumo de gasolina foi de: ",consumo:2:2," l")
+                                
+Fimalgoritmo
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion accordion-item">
+                <h2 class="accordion-header" id="flush-headingNine">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                        Exercício 9 - Efetuar o cálculo e a apresentação do valor de uma prestação em atraso, utilizando
+                        a fórmula PRESTACAO=VALOR+(VALOR*TAXA/100) *TEMPO).
+                    </button>
+                </h2>
+                <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <pre>
+                            <code>
+Algoritmo "Prestacao"
+
+// Disciplina   : [Lógica de Programação Javascript]
+// Professor   : Jailson
+// Descrição   : Realiza o cálculo de uma prestração atrasada através do preço,
+//da taxa e do tempo de parcela.
+// Autor(a)    : Vinícius Batista
+// Data atual  : 09/09/2022
+
+Var
+
+// Seção de Declarações das variáveis
+valor,qntempo,taxa,total,juros,prestacao:real
+
+Inicio
+
+// Seção de Comandos, procedimento, funções, operadores, etc...
+Escreval("Digite valor da parcela:")
+Leia(valor)
+Escreval("Digite o tempo de atraso em dias:")
+Leia(qntempo)
+Escreval("Digite a pocentagem da taxa por dia:")
+Leia(taxa)
+juros<-taxa*30/tempo
+Escreval("O juros total será de:",juros,"%")
+prestacao<-(juros/100*valor)+valor
+Escreval("O valor final da prestação será de:",prestacao)
+
+Fimalgoritmo
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion accordion-item">
+                <h2 class="accordion-header" id="flush-headingTen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                        Exercício 10 - Ler dois valores (inteiros, reais ou caracteres) para as variáveis A e B, e
+                        efetuar a troca dos valores de forma que a variável A passe a possuir o valor da variável B e a
+                        variável B passe a possuir o valor da variável A. Apresentar os valores trocados.
+                    </button>
+                </h2>
+                <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <pre>
+                            <code>
+Algoritmo "InverteValor"
+
+// Disciplina   : Lógica de Programação
+// Professor   : Jailson
+// Descrição   : Armazena as dimensões de um losango e calcula a área
+// Autor(a)    : Vinícius Batista
+// Data atual  : 31/08/2022
+
+Var
+
+a, b, mediador: caractere
+
+Inicio
+
+Escreval("Digite um primeiro valor: ")
+Leia(a)
+Escreval("Digite um segundo valor: ")
+Leia(b)
+
+mediador <- a
+a <- b
+b <- mediador
+
+Escreval("Os valores foram trocados: Primeiro valor: ", a, " e o segundo valor: ", b)
+
+
+Fimalgoritmo
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

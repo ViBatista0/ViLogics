@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meu site pessoal para publicar os exercícios de lógica">
+    <meta name="keywords" content="logica, programação, javascript">
+    <meta name="author" content="Vinícius Batista">
+    <meta name="robots" content="index/follow">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>VisualG - 3</title>
+</head>
+
+<body class="lista">
+
+    <nav class="navbar navbar-expand-lg">
+
+        <div class="container-fluid">
+            <a class="navbar-brand " href="#">ViLogics</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="visualg.html">VisualG</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            JavaScript
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="lacosjs.html">Laços de repetição</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="exercicios py-3" id="ex">
+
+        <div class="container-fluid py-5 text-center">
+
+            <h1>Lista de Lógica 3</h1>
+
+            <div class="accordion" id="list">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Exercício 1 - Ler quatro números inteiros e apresentar o resultado da adição e
+                            multiplicação, baseando-se na utilização do conceito da propriedade distributiva.
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <pre>
+                                <code>
+Algoritmo "OperacaoDistribuida"
+
+// Disciplina   : [Lógica de Programação Javascript]
+// Professor   : Jailson
+// Descrição   : Pega dois valores e depois inverte as variáveis que recebe.
+// Autor(a)    : Vinícius Batista
+// Data atual  : 09/09/2022
+
+Var
+
+// Seção de Declarações das variáveis
+A,B,C,D,soma:inteiro
+multiplicacao:real
+ 
+Inicio
+
+// Seção de Comandos, procedimento, funções, operadores, etc...
+
+Escreval("Escreva o valor A:")
+Leia(A)
+Escreval("Escreva o valor B:")
+Leia(B)
+Escreval("Escreva o valor C:")
+Leia(C)
+Escreval("Escreva o valor D:")
+Leia(D)
+soma<-A+B
+multiplicacao<-A*B
+Escreval("Resultado das operações:")
+Escreval("")
+Escreval("A e B:")
+Escreval("Soma: ",soma," | ","multiplicação: ",multiplicacao)
+Escreval("")
+soma<-A+C
+multiplicacao<-A*C
+Escreval("A e C:")
+Escreval("Soma: ",soma," | ","multiplicação: ",multiplicacao)
+Escreval("")
+soma<-A+D
+multiplicacao<-A*D
+Escreval("A e D:")
+Escreval("Soma: ",soma," | ","multiplicação: ",multiplicacao)
+Escreval("")
+soma<-B+C
+multiplicacao<-B*C
+Escreval("B e C:")
+Escreval("Soma: ",soma," | ","multiplicação: ",multiplicacao)
+Escreval("")
+soma<-B+D
+multiplicacao<-B*D
+Escreval("B e D:")
+Escreval("Soma: ",soma," | ","multiplicação: ",multiplicacao)
+Escreval("")
+soma<-C+D
+multiplicacao<-C*D
+Escreval("C e D:")
+Escreval("Soma: ",soma," | ","multiplicação: ",multiplicacao)
+Escreval("")
+ 
+Fimalgoritmo
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Exercício 2 - Elaborar um programa que calcule e apresente o volume de uma caixa retangular, por
+                        meio da fórmula VOLUME=COMPRIMENTO * LARGURA * ALTURA.
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <pre>
+                            <code>
+Algoritmo "VolumeCaixa"
+
+// Disciplina   : [Lógica de Programação Javascript]
+// Professor   : Jailson
+// Descrição   : Calcula o volume de uma caixa retangular.
+// Autor(a)    : Vinícius Batista
+// Data atual  : 09/09/2022
+
+Var
+
+// Seção de Declarações das variáveis
+Comprimento,altura,largura,volume:real
+
+Inicio
+
+// Seção de Comandos, procedimento, funções, operadores, etc...
+Escreval("Digite o tamanho em comprimento:")
+Leia(comprimento)
+Escreval("Digite a altura da caixa:")
+Leia(altura)
+Escreval("Digite a largura:")
+Leia(largura)
+volume<-comprimento*altura*largura
+Escreval("O volume da caixa é: ",volume,"m²")
+
+Fimalgoritmo
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Exercício 3 - Ler dois inteiros (variáveis A e B) e imprimir o resultado do quadrado da
+                        diferença do primeiro valor pelo segundo.
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <pre>
+                            <code>
+Algoritmo "OQuadradodafirecenca"
+
+// Disciplina   : [Lógica de Programação Javascript]
+// Professor   : Jailson
+// Descrição   : Pega dois valores inteiros, calcula a diferança entre eles e
+// exibe o quadrado desse valor
+// Autor(a)    : Vinícius Batista
+// Data atual  : 09/09/2022
+
+Var
+
+// Seção de Declarações das variáveis
+A, B, conta, resultado:inteiro
+
+Inicio
+
+// Seção de Comandos, procedimento, funções, operadores, etc...
+Escreval("Digite o primeiro valor:")
+Leia(A)
+Escreval("Digite o segundo valor:")
+Leia(B)
+conta<-(A-B)
+Escreval("A diferença entre os números é: ",conta)
+conta<-conta*conta
+Escreval("Esse valor ao quadrado fica: ",conta)
+
+Fimalgoritmo
+
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        Exercício 4 - Elaborar um programa que efetue a apresentação do valor da conversão em real de um
+                        valor lido em dólar. O programa deve solicitar o valor da cotação do dólar e também a quantidade
+                        de dólares disponível com o usuário, para que seja apresentado o valor em moeda brasileira.
+                    </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <pre>
+                            <code>
+Algoritmo "DolarEmReal"
+
+// Disciplina   : [Lógica de Programação Javascript]
+// Professor   : Jailson
+// Descrição   : Solicita um valor em dólar, calcula, conbverte e exibe em real.
+// Autor(a)    : Vinícius Batista
+// Data atual  : 10/09/2022
+
+Var
+
+// Seção de Declarações das variáveis 
+cotacao,dolar,vreal:real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+Escreval("Digite a cotação atual do dólar:")
+Leia(cotacao)
+Escreval("Digite quantos dólares você possui:")
+Leia(dolar)
+vreal<-dolar*cotacao
+Escreval("O valor convertido em reais é:",vreal)
+
+Fimalgoritmo
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion accordion-item">
+                <h2 class="accordion-header" id="flush-headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        Exercício 5 - Elaborar um programa que efetue a apresentação do valor da conversão em dólar de
+                        um
+                        valor lido em real. O programa deve solicitar o valor da cotação do dólar e também a quantidade
+                        de reais disponível com o usuário, para que seja apresentado o valor em moeda americana.
+                    </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <pre>
+                            <code>
+Algoritmo "RealEmDolar"
+
+// Disciplina   : [Lógica de Programação Javascript]
+// Professor   : Jailson
+// Descrição   : Solicita um valor em real, calcula, converte e exibe em dólar.
+// Autor(a)    : Vinícius Batista
+// Data atual  : 10/09/2022
+
+Var
+
+// Seção de Declarações das variáveis
+cotacao,reais,vdolar:real
+
+Inicio
+
+// Seção de Comandos, procedimento, funções, operadores, etc...
+Escreval("Digite a cotação atual do dólar:")
+Leia(cotacao)
+Escreval("Digite quantos reais você possui:")
+Leia(reais)
+vdolar<-reais/cotacao
+Escreval("O valor convertido em dólar é: ",vdolar:2:2)
+
+Fimalgoritmo
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion accordion-item">
+                <h2 class="accordion-header" id="flush-headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                        Exercício 6 - Elaborar um programa que efetue a leitura de três valores (A, B e C) e apresente
+                        como resultado final à soma dos quadrados dos três valores lidos.
+                    </button>
+                </h2>
+                <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <pre>
+                            <code>
+Algoritmo "SomaDosValoresEmQuadrados"
+
+// Disciplina   : [Lógica de Programação Javascript]
+// Professor   : Jailson
+// Descrição   : Solicita três valores, soma e exibe o resultado em quadrados.
+// Autor(a)    : Vinícius Batista
+// Data atual  : 10/09/2022
+
+Var
+
+// Seção de Declarações das variáveis
+A,B,C, resultado:real
+
+Inicio
+
+// Seção de Comandos, procedimento, funções, operadores, etc...
+Escreval("Digite a o valor A:")
+Leia(A)
+Escreval("Digite a o valor B:")
+Leia(B)
+Escreval("Digite a o valor C:")
+Leia(C)
+resultado<-A+B+C
+Escreval("A soma dos valores digitados é: ",resultado)
+resultado<-resultado*resultado
+Escreval("O quadrado desse valor resulta em: ",resultado)
+
+Fimalgoritmo
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion accordion-item">
+                <h2 class="accordion-header" id="flush-headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                        Exercício 7 - Elaborar um programa que efetue a leitura de três valores (A, B e C) e apresente
+                        como resultado final o quadrado da soma dos três valores lidos.
+                    </button>
+                </h2>
+                <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headinSeven"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <pre>
+                            <code>
+Algoritmo "SomaEmQuadrados"
+
+// Disciplina   : [Lógica de Programação Javascript]
+// Professor   : Jailson
+// Descrição   : Solicita três valores, calcula o quadrado e exibe a soma
+// dos valores.
+// Autor(a)    : Vinícius Batista
+// Data atual  : 10/09/2022
+
+Var
+
+// Seção de Declarações das variáveis
+A,B,C, resultado:real
+
+Inicio
+
+// Seção de Comandos, procedimento, funções, operadores, etc...
+Escreval("Digite a o valor A:")
+Leia(A)
+Escreval("Digite a o valor B:")
+Leia(B)
+Escreval("Digite a o valor C:")
+Leia(C)
+resultado<-(A*A)+(B*B)+(C*C)
+Escreval("A soma dos quadrados dos valores digitados é: ",resultado)
+
+Fimalgoritmo
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion accordion-item">
+                <h2 class="accordion-header" id="flush-headingEight">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                        Exercício 8 - Elaborar um programa de computador que efetue a leitura de quatro valores inteiros
+                        (variáveis A, B, C e D). Ao final o programa deve apresentar o resultado do produto (variável P)
+                        do primeiro com o terceiro valor, e o resultado do produto (variável P) do primeiro com o
+                        terceiro valor, e o resultado da soma (variável S) do segundo com o quarto valor.
+                    </button>
+                </h2>
+                <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <pre>
+                            <code>
+Algoritmo "OperacoesDistributivas"
+
+// Disciplina   : [Lógica de Programação Javascript]
+// Professor   : Jailson
+// Descrição   : Pega quatro valores, exibe e realiza a soma e
+//multiplicação deles
+// Autor(a)    : Vinícius Batista
+// Data atual  : 09/09/2022
+
+Var
+
+// Seção de Declarações das variáveis
+A,B,C,D,soma, multiplicacao:real
+
+Inicio
+
+// Seção de Comandos, procedimento, funções, operadores, etc...
+
+Escreval("Digite o valor A:")
+Leia(A)
+Escreval("Digite o valor B:")
+Leia(B)
+Escreval("Digite o valor C:")
+Leia(C)
+Escreval("Digite o valor D:")
+Leia(D)
+Escreval("Resultado das operações:")
+Escreval("")
+Escreval("A e B")
+soma<-A+B
+multiplicacao<-A*B
+Escreval("Soma: ",soma," | multiplicação: ",multiplicacao)
+Escreval("")
+Escreval("A e C")
+soma<-A+C
+multiplicacao<-A*C
+Escreval("Soma: ",soma," | multiplicação: ",multiplicacao)
+Escreval("")
+Escreval("A e D")
+soma<-A+D
+multiplicacao<-A*D
+Escreval("Soma: ",soma," | multiplicação: ",multiplicacao)
+Escreval("")
+Escreval("B e C")
+soma<-B+C
+multiplicacao<-B*C
+Escreval("Soma: ",soma," | multiplicação: ",multiplicacao)
+Escreval("")
+Escreval("B e D")
+soma<-B+D
+multiplicacao<-B*D
+Escreval("Soma: ",soma," | multiplicação: ",multiplicacao)
+Escreval("")
+Escreval("C e D")
+soma<-C+D
+multiplicacao<-C*D
+Escreval("Soma: ",soma," | multiplicação: ",multiplicacao)
+Escreval("")
+
+Fimalgoritmo
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion accordion-item">
+                <h2 class="accordion-header" id="flush-headingNine">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                        Exercício 9 - Ler o valor correspondente ao salário mensal (variável SM) de um trabalhador e
+                        também o valor do percentual de reajuste (variável PR) a ser atribuído. Apresentar o valor do
+                        novo salário (variável NS).
+                    </button>
+                </h2>
+                <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <pre>
+                            <code>
+Algoritmo "ReajusteSalarial"
+
+// Disciplina   :[Lógica de Programação Javascript]
+// Professor   : Jailson
+// Descrição   : Solicita o valor do salário mensal e o reajuste em porcentagem
+// calcula e exibe o valor final.
+// Autor(a)    : Vinícius Batista
+// Data atual  : 10/09/2022
+
+Var
+
+// Seção de Declarações das variáveis
+SM,PR,NS:real
+
+Inicio
+
+// Seção de Comandos, procedimento, funções, operadores, etc...
+Escreval("Digite o valor do salário: ")
+Leia(SM)
+Escreval("Digite o percentual de reajuste:")
+Leia(PR)
+NS<-(PR/100*SM)+SM
+Escreval("O valor após o rejuste é: R$",NS)
+
+Fimalgoritmo
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion accordion-item">
+                <h2 class="accordion-header" id="flush-headingTen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                        Exercício 10 - Calculo de votos de uma eleição, com três candidatos concorrendo.
+                    </button>
+                </h2>
+                <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <pre>
+                            <code>
+Algoritmo "Eleicao"
+
+// Disciplina   :[Lógica de Programação Javascript]
+// Professor   : Jailson
+// Descrição   : Solicita a quantidade de votos válidos, brancos e nulos,
+// calcula e exibe o percentual de cada um, além de solicitar a quantidade de
+//  votos para cada candidato, e fazer o mesmo procedimento.
+// Autor(a)    : Vinícius Batista
+// Data atual  : 10/09/2022
+
+Var
+   // Seção de Declarações das variáveis
+
+   A,B,C,VN,VB,VV,TE,SV:inteiro
+   PVV,PA,PB,PC,PVN,PVB:real
+
+Inicio
+
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   
+   Escreval("Digite o total de votos válidos:")
+   Leia(VV)
+   Escreval("Digite o total de votos em branco:")
+   Leia(VB)
+   Escreval("Digite o total de votos nulos:")
+   Leia(VN)
+   TE<-VV+VB+VN
+   Escreval("")
+   Escreval("O total de eleitores nessa eleição foi: ", TE)
+   Escreval("")
+
+   Escreval("Digite quantos votos foram destinados para o candidato A:")
+   Leia(A)
+   Escreval("")
+   Escreval("Digite quantos votos foram destinados para o candidato B:")
+   Leia(B)
+   Escreval("")
+   Escreval("Digite quantos votos foram destinados para o candidato C:")
+   Leia(C)
+   Escreval("")
+   SV<-A+B+C
+
+   SE VV=SV ENTAO
+      PVV<-VV/100*TE
+      Escreval("Percentual de votos válidos: ",PVV,"%")
+      Escreval("")
+      PA<-A/PVV*SV
+      Escreval("Percentual de votos do candidato A: ",PA,"%")
+      Escreval("")
+      PB<-B/PVV*SV
+      Escreval("Percentual de votos do candidato B: ",PB,"%")
+      Escreval("")
+      PC<-C/PVV*SV
+      Escreval("Percentual de votos do candidato C: ",PC,"%")
+      Escreval("")
+      PVB<-VB/100*TE
+      Escreval("Percentual de votos em branco: ",PVB,"%")
+      PVN<-VN/100*TE
+      Escreval("Percentual de votos nulos: ",PVN,"%")
+   SENAO
+   Escreval("O valor de votos válidos não confere com o digitado")
+fimse
+
+
+
+Fimalgoritmo
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
